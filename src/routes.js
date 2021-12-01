@@ -5,41 +5,26 @@ import {
   Route
 } from "react-router-dom";
 
+import {Login} from './pages/login'
+import {AlugarProduto} from './pages/alugarproduto'
+import {CadastrarProduto} from './pages/cadastrarproduto'
+import {Main} from './pages/main'
+import {ProdutosAlugados} from './pages/produtosalugados'
+import {ProdutosAnunciados} from './pages/produtosanunciados'
+import {SignUp} from './pages/signup'
+
 export default function App() {
   return (
     <Router>
         <Routes>
-          <Route exact path="/" element={<Raiz/>}/>
-          <Route exact path="/user" element={<User/>}/>
+          <Route exact path="/" element={<Main/>}/>
           <Route exact path="/login" element={<Login/>}/>
-          <Route exact path="/signup" element={<Signup/>}/>
-          <Route exact path="/product/{product_id}" element={<Product/>}/>
-          <Route exact path="/employee/{employee_id}" element={<Employee/>}/>
+          <Route exact path="/signup" element={<SignUp/>}/>
+          <Route exact path="/product/{product_id}" element={<AlugarProduto/>}/>
+          <Route exact path="/product/me/rented" element={<ProdutosAlugados/>}/>
+          <Route exact path="/product/me/registered" element={<ProdutosAnunciados/>}/>
+          <Route exact path="/product/register" element={<CadastrarProduto/>}/>
         </Routes>
     </Router>
   );
-}
-
-function Raiz() {
-    return <h2>Raiz</h2>;
-}
-
-function Signup() {
-    return <h2>SignUp</h2>;
-}
-
-function Login() {
-  return <h2>Login</h2>;
-}
-
-function Product() {
-    return <h2>Product</h2>;
-}
-
-function Employee() {
-    return <h2>Employee</h2>;
-}
-
-function User() {
-  return <h2>User</h2>;
 }
