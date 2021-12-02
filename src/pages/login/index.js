@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Text, Flex, Box, Input, Button, InputGroup, InputLeftElement, InputRightElement } from '@chakra-ui/react'
+import { Text, Flex, Box, Input, Button } from '@chakra-ui/react'
 import { EmailIcon, LockIcon } from '@chakra-ui/icons'
 import Fundo from '../../assets/fundo.png'
 import { Link } from 'react-router-dom'

@@ -20,7 +20,7 @@ export default function App() {
           <Route exact path="/" element={<Main/>}/>
           <Route exact path="/login" element={<Login/>}/>
           <Route exact path="/signup" element={<SignUp/>}/>
-          <Route exact path="/product/{product_id}" element={<AlugarProduto/>}/>
+          <Route exact path="/product/:product_id" element={<AlugarProduto/>}/>
           <Route exact path="/product/me/rented" element={<ProdutosAlugados/>}/>
           <Route exact path="/product/me/registered" element={<ProdutosAnunciados/>}/>
           <Route exact path="/product/register" element={<CadastrarProduto/>}/>

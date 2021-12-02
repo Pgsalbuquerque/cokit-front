@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from "react-router-dom"
 
 import { Flex, Image, Icon, Text, Button } from '@chakra-ui/react'
 import { BiUserCircle, BiStar, BiHourglass, BiLocationPlus, BiCoinStack, BiChevronRight } from 'react-icons/bi'
@@ -29,7 +30,7 @@ export const Card = () => {
                     <Icon as={BiCoinStack} color="#FFC633" fontSize="22px" />
                     <Text ml="4" fontSize="16" color="#fff" fontWeight="600" as="small">R$ 200,00/dia</Text>
                 </Flex>
-                <Button h="2rem" w="60%" border="none" borderRadius="6px" backgroundColor="#FFC633" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>}>Alugar</Button>
+                <Button as={Link} to="/product/asdasd" textDecoration="none" h="2rem" w="60%" border="none" borderRadius="6px" backgroundColor="#FFC633" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>}>Alugar</Button>
             </Flex>
         </Flex>
     )

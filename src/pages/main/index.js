@@ -1,9 +1,7 @@
 import React from 'react'
 
-import { Text, Flex, Box, Input, Button, Icon } from '@chakra-ui/react'
+import { Text, Flex, Input, Icon } from '@chakra-ui/react'
 import { BiChevronLeft, BiSearchAlt2, BiX } from 'react-icons/bi'
-
-import Fundo from '../../assets/fundo.png'
 
 import { Card } from './card'
 import { Link } from 'react-router-dom'
