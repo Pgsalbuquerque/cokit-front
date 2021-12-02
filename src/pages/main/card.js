@@ -9,7 +9,7 @@ export const Card = () => {
     return (
         <Flex border="2px solid #FFC633" h="11rem" alignItems="center" justifyContent="space-evenly" borderRadius="10" mt="10">
             <Flex w="50%" alignItems="center" justifyContent="center">
-                <Image w="80%" src={ImageTest} borderRadius="6"></Image>
+                <Image h="150px" src={ImageTest} borderRadius="6"></Image>
             </Flex>
             <Flex w="50%" h="100%" flexDirection="column" alignItems="center" justifyContent="space-evenly">
                 <Flex alignItems="center">

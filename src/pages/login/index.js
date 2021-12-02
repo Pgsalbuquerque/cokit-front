@@ -1,12 +1,26 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 import { Text, Flex, Box, Input, Button } from '@chakra-ui/react'
 import { EmailIcon, LockIcon } from '@chakra-ui/icons'
 import Fundo from '../../assets/fundo.png'
 import { Link } from 'react-router-dom'
-
-
+import { NotMobileError } from '../notmobileerror'
 export const Login = () => {
+    const [isMobile, setIsMobile] = useState(false)
+
+    const isMobileFunction = () => {
+        setIsMobile(window.innerWidth <= 470)
+    }
+
+    useEffect(() => {
+        window.addEventListener('resize', isMobileFunction)
+        return () => window.removeEventListener('resize', isMobileFunction)
+    }, [])
+
+    if (!isMobile) {
+        return <NotMobileError/>
+    }
+
     return (
         <Flex backgroundImage={Fundo} h="100%" 
         backgroundRepeat="no-repeat" 
@@ -35,6 +49,6 @@ export const Login = () => {
                     <Text as={Link} to="/signup" color="#FFC633" fontSize="18" textDecoration="none">cadastre-se</Text>
                 </Flex>
             </Flex>
-        </Flex>
-    )
+        </Flex>   
+ )   
 }

@@ -14,11 +14,12 @@ import {ProdutosAnunciados} from './pages/produtosanunciados'
 import {SignUp} from './pages/signup'
 
 export default function App() {
+  
   return (
     <Router>
         <Routes>
-          <Route exact path="/" element={<Main/>}/>
-          <Route exact path="/login" element={<Login/>}/>
+          <Route exact path="/" element={<Login/>}/>
+          <Route exact path="/list" element={<Main/>}/>
           <Route exact path="/signup" element={<SignUp/>}/>
           <Route exact path="/product/:product_id" element={<AlugarProduto/>}/>
           <Route exact path="/product/me/rented" element={<ProdutosAlugados/>}/>
