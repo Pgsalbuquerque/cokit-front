@@ -12,6 +12,7 @@ import {Main} from './pages/main'
 import {ProdutosAlugados} from './pages/produtosalugados'
 import {ProdutosAnunciados} from './pages/produtosanunciados'
 import {SignUp} from './pages/signup'
+import {Ajuda} from "./pages/help";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route exact path="/product/me/rented" element={<ProdutosAlugados/>}/>
           <Route exact path="/product/me/registered" element={<ProdutosAnunciados/>}/>
           <Route exact path="/product/register" element={<CadastrarProduto/>}/>
+          <Route exact path="/help" element={<Ajuda/>}/>
         </Routes>
     </Router>
   );
