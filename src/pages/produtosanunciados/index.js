@@ -12,16 +12,14 @@ export const ProdutosAnunciados = () => {
         alignItems="center" 
         justifyContent="center" 
         flexDirection="column">
-            <Box h="2" w="16rem" backgroundColor="#FFC633"></Box>
-            <Text fontSize="40px" color="#fff">Cuzinha do math</Text>
-            <Box h="2" w="16rem" backgroundColor="#FFC633"></Box>
-            <Input h="2.3rem" w="280px" placeholder="Seu cpf aqui">
-
-            </Input>
-            <Input h="2.3rem" w="280px" placeholder="Sua senha aqui">
-
-            </Input>
-            <Button h="2.3rem" w="280px" backgroundColor="#FFC633">Entrar</Button>
+            <Box h="100px" w="100px" backgroundColor="#f4f5">
+                <Box h="10px" w="10px" backgroundColor="#f78"></Box>
+                <Box h="10px" w="10px" backgroundColor="blue"></Box>
+            </Box>
+            <Flex display="flex" alignItems="center" justifyContent="center" h="100px" w="100px" backgroundColor="#f43">
+                <Box h="10px" w="10px" backgroundColor="#f78"></Box>
+                <Box h="10px" w="10px" backgroundColor="blue"></Box>
+            </Flex>
         </Flex>
     )
 }
