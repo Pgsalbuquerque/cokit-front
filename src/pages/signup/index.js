@@ -28,47 +28,47 @@ export const SignUp = () => {
       flexDirection="column"
     >
       <Flex flexDirection="column" marginTop="20px" alignItems="center">
-        <Box h="2" w="13rem" backgroundColor="#FFC633"></Box>
+        <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
         <Text as="h1" maxH="100" fontSize="40px" color="#fff">
           COKIT
         </Text>
-        <Box h="2" w="13rem" backgroundColor="#FFC633"></Box>
+        <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
       </Flex>
         <Flex flexDirection="column" marginTop="20px" alignItems="center">
             <Flex h="400px" w="320px" backgroundColor="#FCF7F7" borderRadius="6px" flexDirection="column" alignItems="center">
                 <Flex w="100%" alignItems="space-start" justifyContent="space-around">
                     <Flex alignItems="center" mt="20" maxH="30px">
-                      <Button as={Link} to="/login">
-                        <Icon as={BiArrowBack} fontSize="25px" color="#FFC633" />
+                      <Button as={Link} to="/">
+                        <Icon as={BiArrowBack} fontSize="25px" color="#ffd400" />
                       </Button>
                     </Flex>
                     <Flex flexDirection="column" alignItems="flex-end" mt="10"  maxH="50px" mb="20">
                         <Flex alignItems="center" mt="10">
                             <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Dados Pessoais</Text>
-                            <Flex border={`2px solid ${ etapa >= 1 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 1 ? "#FFC633" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">1</Flex>
+                            <Flex border={`2px solid ${ etapa >= 1 ? "#ffd400" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 1 ? "#ffd400" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">1</Flex>
                         </Flex>
                         <Flex alignItems="center" mt="2">
                             <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Dados de contato</Text>
-                            <Flex border={`2px solid ${ etapa >= 2 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 2 ? "#FFC633" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">2</Flex>
+                            <Flex border={`2px solid ${ etapa >= 2 ? "#ffd400" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 2 ? "#ffd400" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">2</Flex>
                         </Flex>
                         <Flex alignItems="center" mt="2">
                             <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Dados de cadastro</Text>
-                            <Flex border={`2px solid ${ etapa >= 3 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 3 ? "#FFC633" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">3</Flex>
+                            <Flex border={`2px solid ${ etapa >= 3 ? "#ffd400" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 3 ? "#ffd400" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">3</Flex>
                         </Flex>
                     </Flex>
                 </Flex>
                 <Etapas etapa={etapa}/>
                 <Flex mt="10px" justifyContent="flex-end" w="16rem" backgroundColor="#FCF7F7" borderRadius="10">
                     { etapa < 3 ? 
-                      <Icon onClick={() => setEtapa(etapa+1)} as={BiChevronDown} fontSize="30px" color="#313131" backgroundColor="#FFC633" borderRadius="3px"/>
-                      : <Button onClick={handleSubmit} h="2rem" w="35%" border="none" borderRadius="6px" backgroundColor="#FFC633" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>} >Enviar</Button>
+                      <Icon onClick={() => setEtapa(etapa+1)} as={BiChevronDown} fontSize="30px" color="#313131" backgroundColor="#ffd400" borderRadius="3px"/>
+                      : <Button onClick={handleSubmit} h="2rem" w="35%" border="none" borderRadius="6px" backgroundColor="#ffd400" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>} >Enviar</Button>
                     }
                 </Flex>
             </Flex>
         </Flex>
         <Flex h="3rem" w="18rem" mt="10px"  justifyContent="center">
             <Text as="small" color="#fff" fontSize="14" textDecoration="none">Algum problema ocorrido?</Text>
-            <Text ml="4px" as={Link} to="/signup" fontWeight="bold" color="#FFC633" fontSize="14" textDecoration="none">Ajude-me</Text>
+            <Text ml="4px" as={Link} to="/signup" fontWeight="bold" color="#ffd400" fontSize="14" textDecoration="none">Ajude-me</Text>
         </Flex>
     </Flex>
   );

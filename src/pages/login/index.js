@@ -55,9 +55,9 @@ export const Login = () => {
         justifyContent="space-evenly" 
         flexDirection="column">
             <Flex flexDirection="column" marginBottom="-40" alignItems="center">
-                <Box h="2" w="13rem" backgroundColor="#FFC633"></Box>
+                <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
                 <Text as="h1" maxH="100" fontSize="40px" color="#fff">Cokit</Text>
-                <Box h="2" w="13rem" backgroundColor="#FFC633"></Box>
+                <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
             </Flex>
             <Flex flexDirection="column" alignItems="center" h="15rem" justifyContent="space-evenly" marginTop="-40">
                 <Flex w="16rem" backgroundColor="#fff" alignItems="center" borderRadius="10">
@@ -70,10 +70,10 @@ export const Login = () => {
                     <AiFillEye mr="5" color="#525050"/>
                     <AiFillEyeInvisible mr="5" color="#525050"/>
                 </Flex>
-                <Button onClick={handleSubmit} h="3rem" w="16rem" mt="20px" backgroundColor="#FFC633" border="none" fontSize="20" borderRadius="10">Entrar</Button>
+                <Button onClick={handleSubmit} h="3rem" w="16rem" mt="20px" backgroundColor="#ffd400" border="none" fontSize="20" borderRadius="10">Entrar</Button>
                 <Flex flexDirection="row" h="3rem" mt="4">
                     <Text as={Link} to="/signup" color="#fff" fontSize="14" textDecoration="none">Ainda não possui uma conta?</Text>
-                    <Text as={Link} to="/signup" ml="2px" color="#FFC633" fontSize="14" fontWeight="bold" textDecoration="none">Cadastre-se</Text>
+                    <Text as={Link} to="/signup" ml="2px" color="#ffd400" fontSize="14" fontWeight="bold" textDecoration="none">Cadastre-se</Text>
                 </Flex>
             </Flex>
         </Flex>   

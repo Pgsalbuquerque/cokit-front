@@ -14,9 +14,9 @@ export const AlugarProduto = () => {
         <Flex flexDirection="column" alignItems="center" backgroundColor="#322F38" overflowY="hidden" overflow="auto" py="30px">
             <Image h="14rem" src={ImageTest} ></Image>
             <Text fontSize="20px" fontWeight="600" as="small" textAlign="center" color="#fff" mt="10px">Cozinha completa, perfeita para confeitaria.</Text>
-            <Box h="2px" backgroundColor="#FFC633" w="60%" mt="20px"></Box>
+            <Box h="2px" backgroundColor="#ffd400" w="60%" mt="20px"></Box>
             <Flex h="12rem" mt="20px">
-                <Box w="2px" h="80%" backgroundColor="#FFC633" mr="20px"></Box>
+                <Box w="2px" h="80%" backgroundColor="#ffd400" mr="20px"></Box>
                 <Flex flexDirection="column" h="80%">
                     <Text as="small" color="#fff" fontWeight="600" mt="5px">Formas para bolo</Text>
                     <Text as="small" color="#fff" fontWeight="600" mt="5px">Ampola Saborizante</Text>
@@ -25,20 +25,20 @@ export const AlugarProduto = () => {
                     <Text as="small" color="#fff" fontWeight="600" mt="5px">Forno</Text>
                     <Text as="small" color="#fff" fontWeight="600" mt="5px">Microondas</Text>
                     <Text as="small" color="#fff" fontWeight="600" mt="5px">Fogão 6 bocas...</Text>
-                    <Text as="small" color="#FFC633" fontWeight="600" mt="5px">ver mais</Text>
+                    <Text as="small" color="#ffd400" fontWeight="600" mt="5px">ver mais</Text>
                 </Flex>
-                <Box w="2px" h="80%" backgroundColor="#FFC633" ml="20px"></Box>
+                <Box w="2px" h="80%" backgroundColor="#ffd400" ml="20px"></Box>
             </Flex>
-            <Box h="2px" backgroundColor="#FFC633" w="60%" mt="-5px"></Box>
+            <Box h="2px" backgroundColor="#ffd400" w="60%" mt="-5px"></Box>
             <Flex flexDirection="column" alignItems="center">
                 <Flex alignItems="center" mt="10px">
-                    <Icon as={BiUserCircle} color="#FFC633" fontSize="24px"/>
+                    <Icon as={BiUserCircle} color="#ffd400" fontSize="24px"/>
                     <Text as="small" color="#fff" fontWeight="600" ml="10px">Wilson Amor</Text>
-                    <Icon as={BiStar} color="#FFC633" fontSize="24px" ml="10px"/>
+                    <Icon as={BiStar} color="#ffd400" fontSize="24px" ml="10px"/>
                     <Text as="small" color="#fff" fontWeight="600" ml="10px">4.9</Text>
                 </Flex>
                 <Flex alignItems="center" mt="10px">
-                    <Icon as={BiLocationPlus} color="#FFC633" fontSize="24px"/>
+                    <Icon as={BiLocationPlus} color="#ffd400" fontSize="24px"/>
                     <Text as="small" color="#fff" fontWeight="600" ml="10px">Recife, pernambuco</Text>
                     <Icon as={BiCoinStack} color="#FFC633" fontSize="24px" ml="10px"/>
                     <Text as="small" color="#fff" fontWeight="600" ml="10px">R$200,00/dia</Text>

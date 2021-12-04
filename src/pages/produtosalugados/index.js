@@ -12,16 +12,16 @@ export const ProdutosAlugados = () => {
         alignItems="center" 
         justifyContent="center" 
         flexDirection="column">
-            <Box h="2" w="16rem" backgroundColor="#FFC633"></Box>
+            <Box h="2" w="16rem" backgroundColor="#ffd400"></Box>
             <Text fontSize="40px" color="#fff">Cuzinha do math</Text>
-            <Box h="2" w="16rem" backgroundColor="#FFC633"></Box>
+            <Box h="2" w="16rem" backgroundColor="#ffd400"></Box>
             <Input h="2.3rem" w="280px" placeholder="Seu cpf aqui">
 
             </Input>
             <Input h="2.3rem" w="280px" placeholder="Sua senha aqui">
 
             </Input>
-            <Button h="2.3rem" w="280px" backgroundColor="#FFC633">Entrar</Button>
+            <Button h="2.3rem" w="280px" backgroundColor="#ffd400">Entrar</Button>
         </Flex>
     )
 }

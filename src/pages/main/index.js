@@ -11,7 +11,7 @@ export const Main = () => {
         <Flex flexDirection="column" h="100%" backgroundColor="#322F38" overflowY="hidden" overflow="auto"> 
             <Flex alignItems="center" mt="20" maxH="30px" ml="20px">
                 <Button as={Link} to="/login">
-                    <Icon as={BiArrowBack} fontSize="25px" color="#FFC633" />
+                    <Icon as={BiArrowBack} fontSize="25px" color="#ffd400" />
                 </Button>
                 <Flex w="80%" backgroundColor="#FCF7F7" alignItems="center" borderRadius="6" ml="10" >
                     <Icon as={BiSearchAlt2} ml="10" fontSize="16px"/>

@@ -7,7 +7,7 @@ const Message = ({ message }) => {
     <Flex
       mt="10px"
       h="2rem"
-      backgroundColor="#DCF8C6"
+      backgroundColor="#FAF6AC"
       borderRadius="6px"
       padding=" 5px 10px 5px 10px"
       alignItems="center"

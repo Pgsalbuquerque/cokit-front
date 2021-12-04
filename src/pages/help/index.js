@@ -41,11 +41,11 @@ export const Ajuda = () => {
       flexDirection="column"
     >
       <Flex flexDirection="column" marginTop="20px" alignItems="center">
-        <Box h="2" w="13rem" backgroundColor="#FFC633"></Box>
+        <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
         <Text as="h1" maxH="100" fontSize="40px" color="#fff">
           Ajuda
         </Text>
-        <Box h="2" w="13rem" backgroundColor="#FFC633"></Box>
+        <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
 
         <Flex flexDirection="column" marginTop="20px" alignItems="center">
           <Flex
@@ -108,7 +108,7 @@ export const Ajuda = () => {
                   as={BiChevronRight}
                   fontSize="42px"
                   color="#313131"
-                  backgroundColor="#FFC633"
+                  backgroundColor="#ffd400"
                   borderRadius="3px"
                   ml="2px"
                 />
