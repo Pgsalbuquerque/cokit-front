@@ -31,7 +31,7 @@ export const Card = () => {
                     <Text ml="4" fontSize="16" color="#525050" fontWeight="600" as="small">R$ 200,00/dia</Text>
                 </Flex>
                 <Flex alignSelf="center" w="45%">
-                    <Button as={Link} to="/product/asdasd" textDecoration="none" h="2rem" w="100%" border="none" borderRadius="6px" backgroundColor="#FFC633" fontWeight="600" color="#322F38">Alugar</Button>
+                    <Button as={Link} to="/product/asdasd" textDecoration="none" h="2rem" w="100%" border="none" borderRadius="6px" backgroundColor="#FFC633" fontWeight="600" color="#322F38">Ver mais</Button>
                 </Flex>
             </Flex>
         </Flex>
