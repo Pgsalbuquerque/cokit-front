@@ -42,18 +42,18 @@ export const SignUp = () => {
                         <Icon as={BiArrowBack} fontSize="25px" color="#FFC633" />
                       </Button>
                     </Flex>
-                    <Flex flexDirection="column" alignItems="flex-end" mt="10" >
+                    <Flex flexDirection="column" alignItems="flex-end" mt="10"  maxH="50px" mb="20">
                         <Flex alignItems="center" mt="10">
-                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="17px" fontWeight="600">Dados Pessoais</Text>
-                            <Flex border={`2px solid ${ etapa >= 1 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="20px" color={ etapa >= 1 ? "#FFC633" : "#DDDDDD"}  w="20px" borderRadius="50%" alignItems="center" justifyContent="center">1</Flex>
+                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Dados Pessoais</Text>
+                            <Flex border={`2px solid ${ etapa >= 1 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 1 ? "#FFC633" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">1</Flex>
                         </Flex>
-                        <Flex alignItems="center" mt="10">
-                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="17px" fontWeight="600">Dados de contato</Text>
-                            <Flex border={`2px solid ${ etapa >= 2 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="20px" color={ etapa >= 2 ? "#FFC633" : "#DDDDDD"} w="20px" borderRadius="50%" alignItems="center" justifyContent="center">2</Flex>
+                        <Flex alignItems="center" mt="2">
+                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Dados de contato</Text>
+                            <Flex border={`2px solid ${ etapa >= 2 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 2 ? "#FFC633" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">2</Flex>
                         </Flex>
-                        <Flex alignItems="center" mt="10">
-                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="17px" fontWeight="600">Dados de cadastro</Text>
-                            <Flex border={`2px solid ${ etapa >= 3 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="20px" color={ etapa >= 3 ? "#FFC633" : "#DDDDDD"} w="20px" borderRadius="50%" alignItems="center" justifyContent="center">3</Flex>
+                        <Flex alignItems="center" mt="2">
+                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Dados de cadastro</Text>
+                            <Flex border={`2px solid ${ etapa >= 3 ? "#FFC633" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 3 ? "#FFC633" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">3</Flex>
                         </Flex>
                     </Flex>
                 </Flex>
@@ -66,9 +66,9 @@ export const SignUp = () => {
                 </Flex>
             </Flex>
         </Flex>
-        <Flex h="3rem" w="18rem" mt="10px">
-            <Text as="small" color="#fff" fontSize="18" textDecoration="none">Algum problema ocorrido?</Text>
-            <Text ml="4px" as={Link} to="/signup" fontWeight="bold" color="#FFC633" fontSize="18" textDecoration="none">Ajude-me</Text>
+        <Flex h="3rem" w="18rem" mt="10px"  justifyContent="center">
+            <Text as="small" color="#fff" fontSize="14" textDecoration="none">Algum problema ocorrido?</Text>
+            <Text ml="4px" as={Link} to="/signup" fontWeight="bold" color="#FFC633" fontSize="14" textDecoration="none">Ajude-me</Text>
         </Flex>
     </Flex>
   );

@@ -51,7 +51,7 @@ export const Etapas = (props) => {
         return (
         <Box mt="20px">
             <Flex flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">
-                <Text as="small" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600" backgroundColor="#FCF7F7">Usuario</Text>
+                <Text as="small" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600" backgroundColor="#FCF7F7">Usuário</Text>
                 <Input value={etapa3.usuario}  onChange={e => setEtapa3({usuario: e.target.value, senha: etapa3.senha, confirmarSenha: etapa3.confirmarSenha})} border="none" borderBottom={`2px solid ${etapa3.usuario === "" ? "#DDDDDD" :  "#FFC633"}`} outline="none" type="name" h="2rem" textIndent="10px" w="16rem" color="#525050" fontWeight="600" backgroundColor="#FCF7F7"/>
             </Flex>
             <Flex mt="10px" flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">
