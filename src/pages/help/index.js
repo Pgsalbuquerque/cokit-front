@@ -86,6 +86,7 @@ export const Ajuda = () => {
               marginTop="20px"
               alignItems="flex-end"
               justifyContent="center"
+              mb="8px"
             >
               <Input
                 ml="8px"

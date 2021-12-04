@@ -12,6 +12,7 @@ import {Main} from './pages/main'
 import {ProdutosAlugados} from './pages/produtosalugados'
 import {ProdutosAnunciados} from './pages/produtosanunciados'
 import {SignUp} from './pages/signup'
+import { Ajuda } from "./pages/help";
 
 export default function App() {
   
@@ -25,6 +26,7 @@ export default function App() {
             <Route exact path="/product/me/rented" render={() => <ProdutosAlugados/>}/>
             <Route exact path="/product/me/registered" render={() => <ProdutosAnunciados/>}/>
             <Route exact path="/product/register" render={() => <CadastrarProduto/>}/>
+            <Route exact path="/help" render={() => <Ajuda/>}/>
       </Switch>
     </BrowserRouter>
   );
