@@ -9,14 +9,14 @@ import {
 import Fundo from "../../assets/fundo.png";
 import { Link } from "react-router-dom";
 import { BiArrowBack, BiChevronDown, BiChevronRight } from 'react-icons/bi'
-
+ 
 import {Etapas} from "./etapa1"
-
+ 
 export const SignUp = () => {
   const [etapa, setEtapa] = useState(1)
-
+ 
   const handleSubmit = () => {}
-
+ 
   return (
     <Flex
       backgroundImage={Fundo}
