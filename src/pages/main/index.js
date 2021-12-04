@@ -16,17 +16,7 @@ export const Main = () => {
             <Flex flexDirection="column" w="100%" alignItems="center" mt="10">
                 <Flex w="80%" backgroundColor="#fff" alignItems="center" borderRadius="6">
                     <Icon as={BiSearchAlt2} ml="10" fontSize="16px"/>
-                    <Input h="2rem" w="100%" ml="10" placeholder="Seu login aqui" outline="none" color="#525050" fontWeight="600" border="none" borderRadius="10"/>
-                </Flex>
-                <Flex mt="2px" w="80%">
-                    <Flex backgroundColor="#fff" alignItems="center" px="6">
-                        <Text as="small" color="#322F38" fontSize="14px" fontWeight="600">Cozinha</Text>
-                        <Icon as={BiX} fontSize="16px" color="#322F38" />
-                    </Flex>
-                    <Flex backgroundColor="#fff" alignItems="center" ml="10" px="6">
-                        <Text as="small" color="#322F38" fontSize="14px" fontWeight="600">Confeitaria</Text>
-                        <Icon as={BiX} fontSize="16px" color="#322F38" />
-                    </Flex>
+                    <Input h="2rem" w="100%" ml="10" placeholder="Filtrar por titulo" outline="none" color="#525050" fontWeight="600" border="none" borderRadius="10"/>
                 </Flex>
             </Flex>
             <Flex flexDirection="column" padding="10">

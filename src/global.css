@@ -8,3 +8,24 @@ body {
 #root {
     height: 100vh;
 }
+
+
+@font-face {
+    font-family: 'Mada';
+    src: local('Mada'), url(./assets/fonts/Mada-Regular.ttf) format('opentype');
+  }
+  
+@font-face {
+    font-family: 'Mada';
+    font-weight: 600;
+    src: local('Mada'), url(./assets//fonts/Mada-Bold.ttf) format('opentype');
+}
+
+element_selector {
+    font-family: Mada, Roboto;
+}
+
+html *
+{
+   font-family: Mada !important;
+}

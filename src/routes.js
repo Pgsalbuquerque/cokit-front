@@ -1,7 +1,7 @@
 import React from "react";
 import {
-  BrowserRouter as Router,
-  Routes,
+  BrowserRouter,
+  Switch,
   Route
 } from "react-router-dom";
 
@@ -16,16 +16,16 @@ import {SignUp} from './pages/signup'
 export default function App() {
   
   return (
-    <Router>
-        <Routes>
-          <Route exact path="/" element={<Login/>}/>
-          <Route exact path="/list" element={<Main/>}/>
-          <Route exact path="/signup" element={<SignUp/>}/>
-          <Route exact path="/product/:product_id" element={<AlugarProduto/>}/>
-          <Route exact path="/product/me/rented" element={<ProdutosAlugados/>}/>
-          <Route exact path="/product/me/registered" element={<ProdutosAnunciados/>}/>
-          <Route exact path="/product/register" element={<CadastrarProduto/>}/>
-        </Routes>
-    </Router>
+    <BrowserRouter>
+      <Switch>
+            <Route exact path="/" render={() => <Login/>}/>
+            <Route exact path="/list" render={() => <Main/>}/>
+            <Route exact path="/signup" render={() => <SignUp/>}/>
+            <Route exact path="/product/:product_id" render={() => <AlugarProduto/>}/>
+            <Route exact path="/product/me/rented" render={() => <ProdutosAlugados/>}/>
+            <Route exact path="/product/me/registered" render={() => <ProdutosAnunciados/>}/>
+            <Route exact path="/product/register" render={() => <CadastrarProduto/>}/>
+      </Switch>
+    </BrowserRouter>
   );
 }
