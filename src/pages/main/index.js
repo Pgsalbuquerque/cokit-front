@@ -15,7 +15,7 @@ export const Main = () => {
                 </Button>
                 <Flex w="80%" backgroundColor="#FCF7F7" alignItems="center" borderRadius="6" ml="10" >
                     <Icon as={BiSearchAlt2} ml="10" fontSize="16px"/>
-                    <Input h="2rem" w="100%" ml="10" placeholder="O que você está procurando?" outline="none" color="#525050" fontWeight="600" border="none" borderRadius="10"/>
+                    <Input h="2rem" w="100%" ml="10" placeholder="O que você está procurando?" outline="none" color="#525050" fontWeight="600" border="none" borderRadius="10" backgroundColor="#FCF7F7"/>
                 </Flex>
             </Flex>
             <Flex flexDirection="column" padding="10">
