@@ -22,6 +22,8 @@ export const Ajuda = () => {
       ...messages,
       {
         conteudo: texto,
+        date: new Date(),
+        client: true
       },
     ];
     setMessages(newMessages);
@@ -60,7 +62,7 @@ export const Ajuda = () => {
               A equipe da Cokit nunca pedirá senha ou qualquer informação
               sigilosa.
             </Text>
-            <Flex h="70%" w="100%" flexDirection="column" alignItems="flex-end" mr="20px">
+            <Flex h="70%" w="100%" flexDirection="column" overflowY="auto" overflow="auto">
               {/* <Flex
                 mt="10px"
                 h="2rem"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import { Text, Flex, Box, Input, Button } from '@chakra-ui/react'
+import { Text, Flex, Box, Input, Button, Icon } from '@chakra-ui/react'
 import { EmailIcon, LockIcon} from '@chakra-ui/icons'
 import Fundo from '../../assets/fundo.png'
 import { Link } from 'react-router-dom'
@@ -13,6 +13,7 @@ export const Login = () => {
     const [isMobile, setIsMobile] = useState(window.innerWidth <= 470)
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
+    const [verSenha, setVerSenha] = useState(false)
 
     useEffect(() => {
         const token = localStorage.getItem("cokitsession")
@@ -66,9 +67,8 @@ export const Login = () => {
                 </Flex>
                 <Flex w="16rem" backgroundColor="#fff" alignItems="center" borderRadius="10">
                     <LockIcon ml="10"/>
-                    <Input value={senha} onChange={e => setSenha(e.target.value)} outline="none" type="password" ml="10" h="3rem" textIndent="10" w="16rem" color="#525050" fontWeight="600" placeholder="Sua senha aqui" border="none"/>
-                    <AiFillEye mr="5" color="#525050"/>
-                    <AiFillEyeInvisible mr="5" color="#525050"/>
+                    <Input value={senha} onChange={e => setSenha(e.target.value)} outline="none" type={verSenha ? "text" : "password"} ml="10" h="3rem" textIndent="10" w="16rem" color="#525050" fontWeight="600" placeholder="Sua senha aqui" border="none"/>
+                    <Icon as={verSenha ? AiFillEye : AiFillEyeInvisible} onClick={() => setVerSenha(!verSenha)} fontSize="20px" mr="10px" />
                 </Flex>
                 <Button onClick={handleSubmit} h="3rem" w="16rem" mt="20px" backgroundColor="#ffd400" border="none" fontSize="20" borderRadius="10">Entrar</Button>
                 <Flex flexDirection="row" h="3rem" mt="4">

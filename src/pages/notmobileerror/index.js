@@ -11,7 +11,7 @@ export const NotMobileError = () => {
         alignItems="center" 
         justifyContent="center" 
         flexDirection="column"
-        backgroundColor="#ffd400"
+        backgroundColor="#FFDE59"
         >
             <Image src={Erro} w="300px" h="300px" />
             <Text fontFamily="Mada" as="small" color="#000" py="10px" px="20px" alignItems="center" borderRadius="10px" fontWeight="600" fontSize="30px" textAlign="center">Desculpe o inconveniente :(</Text>
