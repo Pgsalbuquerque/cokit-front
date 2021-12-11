@@ -68,7 +68,7 @@ export const CadastrarProduto = () => {
         </Flex>
         <Flex h="3rem" w="18rem" mt="10px"  justifyContent="center">
             <Text as="small" color="#fff" fontSize="14" textDecoration="none">Algum problema ocorrido?</Text>
-            <Text ml="4px" as={Link} to="/help" fontWeight="bold" color="#ffd400" fontSize="14" textDecoration="none">Ajude-me</Text>
+            <Text ml="4px" as={Link} to="/help" fontWeight="bold" color="#ffd400" fontSize="14" textDecoration="none">Suporte</Text>
         </Flex>
     </Flex>
   );

@@ -28,13 +28,13 @@ export const SignUp = () => {
       flexDirection="column"
     >
       <Flex flexDirection="column" marginTop="20px" alignItems="center">
-        <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
-        <Text as="h1" maxH="100" fontSize="40px" color="#fff">
+        {/* <Box h="2" w="13rem" backgroundColor="#ffd400"></Box> */}
+        <Text as="h1" maxH="100" fontSize="70px" color="#ffd400">
           COKIT
         </Text>
-        <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
+        {/* <Box h="2" w="13rem" backgroundColor="#ffd400"></Box> */}
       </Flex>
-        <Flex flexDirection="column" marginTop="20px" alignItems="center">
+        <Flex flexDirection="column" marginTop="40px" alignItems="center">
             <Flex h="400px" w="320px" backgroundColor="#FCF7F7" borderRadius="6px" flexDirection="column" alignItems="center">
                 <Flex w="100%" alignItems="space-start" justifyContent="space-around">
                     <Flex alignItems="center" mt="20" maxH="30px">
@@ -61,14 +61,14 @@ export const SignUp = () => {
                 <Flex mt="10px" justifyContent="flex-end" w="16rem" backgroundColor="#FCF7F7" borderRadius="10">
                     { etapa < 3 ? 
                       <Icon onClick={() => setEtapa(etapa+1)} as={BiChevronDown} fontSize="30px" color="#313131" backgroundColor="#ffd400" borderRadius="3px"/>
-                      : <Button onClick={handleSubmit} h="2rem" w="35%" border="none" borderRadius="6px" backgroundColor="#ffd400" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>} >Enviar</Button>
+                      : <Button onClick={handleSubmit} h="2rem" w="35%" border="none" borderRadius="6px" backgroundColor="#ffd400" fontWeight="600" color="#322F38">Enviar</Button>
                     }
                 </Flex>
             </Flex>
         </Flex>
         <Flex h="3rem" w="18rem" mt="10px"  justifyContent="center">
             <Text as="small" color="#fff" fontSize="14" textDecoration="none">Algum problema ocorrido?</Text>
-            <Text ml="4px" as={Link} to="/help" fontWeight="bold" color="#ffd400" fontSize="14" textDecoration="none">Ajude-me</Text>
+            <Text ml="4px" as={Link} to="/help" fontWeight="bold" color="#ffd400" fontSize="14" textDecoration="none">Suporte</Text>
         </Flex>
     </Flex>
   );
