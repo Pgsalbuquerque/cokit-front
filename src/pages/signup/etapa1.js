@@ -62,7 +62,7 @@ export const Etapas = (props) => {
 
         }).then(r => {
             localStorage.setItem("cokitsession", r.data.token)
-            history.push('/login')
+            history.push('/')
         })
         }
         return (
