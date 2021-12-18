@@ -44,15 +44,15 @@ export const CadastrarProduto = () => {
                     </Flex>
                     <Flex flexDirection="column" alignItems="flex-end" mt="10"  maxH="50px" mb="20">
                         <Flex alignItems="center" mt="10">
-                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Imagem da cozinha</Text>
+                            <Text as="small" to="/" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Imagem da cozinha</Text>
                             <Flex border={`2px solid ${ etapa >= 1 ? "#ffd400" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 1 ? "#ffd400" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">1</Flex>
                         </Flex>
                         <Flex alignItems="center" mt="2">
-                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Informacoes gerais</Text>
+                            <Text as="small" to="/" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Informacoes gerais</Text>
                             <Flex border={`2px solid ${ etapa >= 2 ? "#ffd400" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 2 ? "#ffd400" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">2</Flex>
                         </Flex>
                         <Flex alignItems="center" mt="2">
-                            <Text as="small" to="/login" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Financeiro</Text>
+                            <Text as="small" to="/" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Financeiro</Text>
                             <Flex border={`2px solid ${ etapa >= 3 ? "#ffd400" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 3 ? "#ffd400" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">3</Flex>
                         </Flex>
                     </Flex>
