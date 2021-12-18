@@ -17,8 +17,8 @@ export const Login = () => {
 
     useEffect(() => {
         const token = localStorage.getItem("cokitsession")
-        if (token){
-            history.push("/list")
+        if (token && token !== undefined){
+            history.push("/menu")
         }
     })
 
@@ -33,7 +33,7 @@ export const Login = () => {
         {email, senha}
     ).then(r => {
         localStorage.setItem("cokitsession", r.data.token)
-        history.push("/list")
+        history.push("/menu")
     }).catch(e => alert("Senha incorreta"))
     }
 

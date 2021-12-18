@@ -15,13 +15,14 @@ import {ProdutosAnunciados} from './pages/produtosanunciados'
 import {SignUp} from './pages/signup'
 import {Ajuda} from "./pages/help";
 import {InicialPage} from "./pages/paginainicial";
+import {Chat} from "./pages/chat";
+import {Menu} from "./pages/menu";
 
 export default function App() {
   
   return (
     <BrowserRouter>
       <Switch>
-            <Route exact path="/login" render={() => <Login/>}/>
             <Route exact path="/list" render={() => <Main/>}/>
             <Route exact path="/signup" render={() => <SignUp/>}/>
             <Route exact path="/product/:product_id" render={() => <AlugarProduto/>}/>
@@ -30,7 +31,9 @@ export default function App() {
             <Route exact path="/product/me/registered" render={() => <ProdutosAnunciados/>}/>
             <Route exact path="/product/me/register" render={() => <CadastrarProduto/>}/>
             <Route exact path="/help" render={() => <Ajuda/>}/>
-            <Route exact path="/" render={() => <InicialPage/>}/>
+            <Route exact path="/" render={() => <Login/>}/>
+            <Route exact path="/chat/:user_id" render={() => <Chat/>}/>
+            <Route exact path="/menu" render={() => <Menu/>}/>
       </Switch>
     </BrowserRouter>
   );

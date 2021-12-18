@@ -5,12 +5,14 @@ import {
   Box,
   Input,
 } from "@chakra-ui/react";
+import {useHistory} from 'react-router-dom'
+import api from '../../api'
 
 export const Etapas = (props) => {
     const [etapa1, setEtapa1] = useState({nome: "", cpf: "", identidade: ""})
     const [etapa2, setEtapa2] = useState({email: "", celular: ""})
     const [etapa3, setEtapa3] = useState({usuario: "", senha: "", confirmarSenha: ""})
-
+    const history = useHistory()
     if (props.etapa === 1) {
         return (
         <Box mt="20px">
@@ -47,7 +49,22 @@ export const Etapas = (props) => {
         )
     }
 
-    if (props.etapa === 3) {
+    if (props.etapa >= 3) {
+        if (props.etapa === 4) {
+            api.post("/usuarios", {
+                cpf: etapa1.cpf,
+                nome: etapa1.nome,
+                senha: etapa3.senha,
+                email: etapa2.email,
+                celular: etapa2.celular,
+                usuario: etapa3.usuario,
+                identidade: etapa1.identidade,
+
+        }).then(r => {
+            localStorage.setItem("cokitsession", r.data.token)
+            history.push('/login')
+        })
+        }
         return (
         <Box mt="20px">
             <Flex flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">
@@ -66,8 +83,4 @@ export const Etapas = (props) => {
 
         )
     }
-
-  return ( 
-        <Text>etapa</Text>
-  );
 };

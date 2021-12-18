@@ -38,7 +38,7 @@ export const CadastrarProduto = () => {
             <Flex h="400px" w="320px" backgroundColor="#FCF7F7" borderRadius="6px" flexDirection="column" alignItems="center">
                 <Flex w="100%" alignItems="space-start" justifyContent="space-around">
                     <Flex alignItems="center" mt="20" maxH="30px">
-                      <Button as={Link} to="/">
+                      <Button as={Link} to="/menu">
                         <Icon as={BiArrowBack} fontSize="25px" color="#ffd400" />
                       </Button>
                     </Flex>
@@ -61,7 +61,7 @@ export const CadastrarProduto = () => {
                 <Flex mt="10px" justifyContent="flex-end" w="16rem" backgroundColor="#FCF7F7" borderRadius="10">
                     { etapa < 3 ? 
                       <Icon onClick={() => setEtapa(etapa+1)} as={BiChevronDown} fontSize="30px" color="#313131" backgroundColor="#ffd400" borderRadius="3px"/>
-                      : <Button onClick={handleSubmit} h="2rem" w="35%" border="none" borderRadius="6px" backgroundColor="#ffd400" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>} >Publicar</Button>
+                      : <Button onClick={() => setEtapa(etapa+1)} h="2rem" w="35%" border="none" borderRadius="6px" backgroundColor="#ffd400" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>} >Publicar</Button>
                     }
                 </Flex>
             </Flex>

@@ -9,13 +9,10 @@ import {
 import Fundo from "../../assets/fundo.png";
 import { Link } from "react-router-dom";
 import { BiArrowBack, BiChevronDown, BiChevronRight } from 'react-icons/bi'
- 
 import {Etapas} from "./etapa1"
  
 export const SignUp = () => {
   const [etapa, setEtapa] = useState(1)
- 
-  const handleSubmit = () => {}
  
   return (
     <Flex
@@ -61,7 +58,7 @@ export const SignUp = () => {
                 <Flex mt="10px" justifyContent="flex-end" w="16rem" backgroundColor="#FCF7F7" borderRadius="10">
                     { etapa < 3 ? 
                       <Icon onClick={() => setEtapa(etapa+1)} as={BiChevronDown} fontSize="30px" color="#313131" backgroundColor="#ffd400" borderRadius="3px"/>
-                      : <Button onClick={handleSubmit} h="2rem" w="35%" border="none" borderRadius="6px" backgroundColor="#ffd400" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>} >Enviar</Button>
+                      : <Button onClick={() => setEtapa(etapa+1)} h="2rem" w="35%" border="none" borderRadius="6px" backgroundColor="#ffd400" fontWeight="600" color="#322F38" rightIcon={<Icon as={BiChevronRight} fontSize="20px" color="#322F38"/>} >Enviar</Button>
                     }
                 </Flex>
             </Flex>
