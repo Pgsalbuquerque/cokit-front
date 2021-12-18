@@ -51,39 +51,22 @@ export const Ajuda = () => {
         <Text as="h1" maxH="100" fontSize="40px" color="#fff">
           Ajuda
         </Text>
-        <Box h="2" w="13rem" backgroundColor="#ffd400"></Box>
+        {/* <Box h="2" w="13rem" backgroundColor="#ffd400"></Box> */}
 
         <Flex flexDirection="column" marginTop="20px" alignItems="center">
           <Flex
-            h="450px"
-            w="320px"
+            h="550px"
+            w="350px"
             backgroundColor="#FCF7F7"
             borderRadius="6px"
             flexDirection="column"
             alignItems="center"
           >
-            <Text as="h2" fontSize="16px" color="#505565" textAlign="center">
+            <Text as="h2" fontSize="18px" color="#505565" textAlign="center">
               A equipe da Cokit nunca pedirá senha ou qualquer informação
               sigilosa.
             </Text>
             <Flex h="70%" w="100%" flexDirection="column" overflowY="auto" overflow="auto">
-              {/* <Flex
-                mt="10px"
-                h="2rem"
-                backgroundColor="#DCF8C6"
-                borderRadius="6px"
-                padding=" 5px 10px 5px 10px"
-                alignItems="center"
-              >
-                <Text
-                  as="small"
-                  fontSize="14px"
-                  fontWeight="bold"
-                  color="#505565"
-                >
-                  Preciso de ajuda!
-                </Text>
-              </Flex> */}
               <Messages
                     messages={messages}
                 />
@@ -97,7 +80,7 @@ export const Ajuda = () => {
               <Input
                 ml="8px"
                 type="name"
-                h="40px"
+                h="50px"
                 textIndent="10"
                 w="15rem"
                 color="#525050"
@@ -112,7 +95,7 @@ export const Ajuda = () => {
               <Button onClick={handleAddMessageClick} border="none">
                 <Icon
                   as={BiChevronRight}
-                  fontSize="42px"
+                  fontSize="52px"
                   color="#313131"
                   backgroundColor="#ffd400"
                   borderRadius="3px"

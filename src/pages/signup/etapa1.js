@@ -37,7 +37,7 @@ export const Etapas = (props) => {
         return (
         <Box mt="20px">
             <Flex flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">
-                <Text as="small" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600" backgroundColor="#FCF7F7">Email</Text>
+                <Text as="small" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600" backgroundColor="#FCF7F7">E-mail</Text>
                 <Input value={etapa2.email}  onChange={e => setEtapa2({email: e.target.value, celular: etapa2.celular})} border="none" borderBottom={`2px solid ${etapa2.email === "" ? "#DDDDDD" :  "#ffd400"}`} outline="none" type="email" h="2rem" textIndent="10px" w="16rem" color="#525050" fontWeight="600" backgroundColor="#FCF7F7"/>
             </Flex>
             <Flex mt="10px" flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">
