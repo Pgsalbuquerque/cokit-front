@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import {
   BrowserRouter,
   Switch,
@@ -14,12 +14,26 @@ import {ProdutosAlugados2} from './pages/produtosalugados2'
 import {ProdutosAnunciados} from './pages/produtosanunciados'
 import {SignUp} from './pages/signup'
 import {Ajuda} from "./pages/help";
-import {InicialPage} from "./pages/paginainicial";
+import {NotMobileError} from "./pages/notmobileerror";
 import {Chat} from "./pages/chat";
 import {Menu} from "./pages/menu";
 
 export default function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 470)
   
+  const isMobileFunction = () => {
+    setIsMobile(window.innerWidth <= 470)
+  }
+
+  useEffect(() => {
+    window.addEventListener('resize', isMobileFunction)
+    return () => window.removeEventListener('resize', isMobileFunction)
+  }, [])
+
+  if (!isMobile) {
+    return <NotMobileError/>
+  }
+
   return (
     <BrowserRouter>
       <Switch>
