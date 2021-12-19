@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import InputMask from "react-input-mask";
 import {
   Text,
   Flex,
@@ -20,7 +21,7 @@ export const Etapas = (props) => {
             </Flex>
             <Flex mt="10px" flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">
                 <Text as="small" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600" backgroundColor="#FCF7F7">CPF</Text>
-                <Input value={etapa1.cpf}  onChange={e => setEtapa1({nome: etapa1.nome, cpf: e.target.value, identidade: etapa1.identidade})} border="none" borderBottom={`2px solid ${etapa1.cpf === "" ? "#DDDDDD" :  "#ffd400"}`} outline="none" type="name" h="2rem" textIndent="10px" w="16rem" color="#525050" fontWeight="600" backgroundColor="#FCF7F7"/>
+                <Input  mask="999.999.999-99" value={etapa1.cpf}  onChange={e => setEtapa1({nome: etapa1.nome, cpf: e.target.value, identidade: etapa1.identidade})} border="none" borderBottom={`2px solid ${etapa1.cpf === "" ? "#DDDDDD" :  "#ffd400"}`} outline="none" type="name" h="2rem" textIndent="10px" w="16rem" color="#525050" fontWeight="600" backgroundColor="#FCF7F7"/>
             </Flex>
             <Flex mt="10px" flexDirection="column" w="16rem" backgroundColor="FCF7F7" alignItems="flex-start" borderRadius="10">
                 <Text as="small" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600" backgroundColor="#FCF7F7">Identidade</Text>

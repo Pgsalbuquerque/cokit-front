@@ -3,6 +3,8 @@ import React from "react";
 import { useState } from "react";
 
 import { Text, Flex, Box, Input, Button, Icon } from "@chakra-ui/react";
+import { BiArrowBack } from 'react-icons/bi'
+import { Link } from 'react-router-dom'
 import Fundo from "../../assets/fundo.png";
 import { BiChevronRight } from "react-icons/bi";
 import Messages from "./messages";
@@ -23,7 +25,7 @@ export const Ajuda = () => {
       {
         conteudo: texto,
         date: new Date(),
-        client: true
+        client: true,
       },
     ];
     setMessages(newMessages);
@@ -42,12 +44,16 @@ export const Ajuda = () => {
       justifyContent="space-start"
       flexDirection="column"
     >
-      <Flex flexDirection="column" marginTop="20px" alignItems="center">
-        {/* <Box h="2" w="13rem" backgroundColor="#ffd400"></Box> */}
-        <Text mt= "20px" as="h1" maxH="100" fontSize="40px" color="#ffd400">
-          SUPORTE
-        </Text>
-        {/* <Box h="2" w="13rem" backgroundColor="#ffd400"></Box> */}
+      <Flex flexDirection="column" marginTop="20px" >
+        <Flex flexDirection="row" alignItens="space-between">        
+          <Button as={Link} to="/login">
+            <Icon as={BiArrowBack} fontSize="25px" color="#ffd400" />
+          </Button>
+          <Text mt="20px" as="h1" maxH="100" fontSize="40px" color="#ffd400" ml="60px">
+            SUPORTE
+          </Text>
+
+        </Flex>
 
         <Flex flexDirection="column" marginTop="20px" alignItems="center">
           <Flex
@@ -62,10 +68,14 @@ export const Ajuda = () => {
               A equipe da Cokit nunca pedirá senha ou qualquer informação
               sigilosa.
             </Text>
-            <Flex h="70%" w="100%" flexDirection="column" overflowY="auto" overflow="auto">
-              <Messages
-                    messages={messages}
-                />
+            <Flex
+              h="70%"
+              w="100%"
+              flexDirection="column"
+              overflowY="auto"
+              overflow="auto"
+            >
+              <Messages messages={messages} />
             </Flex>
             <Flex
               marginTop="20px"
