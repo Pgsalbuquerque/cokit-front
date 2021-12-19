@@ -3,8 +3,6 @@ import React from "react";
 import { useState } from "react";
 
 import { Text, Flex, Box, Input, Button, Icon } from "@chakra-ui/react";
-import { BiArrowBack } from 'react-icons/bi'
-import { Link } from 'react-router-dom'
 import Fundo from "../../assets/fundo.png";
 import { BiChevronRight, BiArrowBack } from "react-icons/bi";
 import {Link} from "react-router-dom"
