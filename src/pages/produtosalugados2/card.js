@@ -3,7 +3,6 @@ import {Link} from "react-router-dom"
 
 import { Flex, Image, Icon, Text, Button } from '@chakra-ui/react'
 import { BiUserCircle, BiStar, BiHourglass, BiLocationPlus, BiCoinStack } from 'react-icons/bi'
-import ImageTest from '../../assets/imageteste1.png'
 
 export const Card = (props) => {
     return (

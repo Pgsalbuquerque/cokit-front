@@ -3,6 +3,7 @@ import { Text, Flex} from "@chakra-ui/react";
 
 const Message = ({ message }) => {
   const margin = message.enviou ? "0 10px 0 0" : "0 0 0 10px"
+  const date = new Date(message.dataEnvio)
   return (
     <Flex
       mt="10px"
@@ -14,7 +15,7 @@ const Message = ({ message }) => {
           {message.mensagem}
         </Text>
         <Text w="100%" as="small" fontSize="11px" fontWeight="bold" color="#505565" textAlign="left">
-          {`qlq`}
+          {`${date.getHours()}:${date.getMinutes()} - ${date.toLocaleDateString()}`}
         </Text>
       </Flex>
     </Flex>

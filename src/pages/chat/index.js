@@ -45,7 +45,7 @@ export const Chat = () => {
         ...messages,
         {
           mensagem: texto,
-          date: date,
+          dataEnvio: date,
           enviou: true,
         },
       ];
