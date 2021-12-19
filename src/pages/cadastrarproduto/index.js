@@ -48,7 +48,7 @@ export const CadastrarProduto = () => {
                             <Flex border={`2px solid ${ etapa >= 1 ? "#ffd400" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 1 ? "#ffd400" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">1</Flex>
                         </Flex>
                         <Flex alignItems="center" mt="2">
-                            <Text as="small" to="/" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Informacoes gerais</Text>
+                            <Text as="small" to="/" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600">Informações gerais</Text>
                             <Flex border={`2px solid ${ etapa >= 2 ? "#ffd400" : "#DDDDDD"}`} ml="10px" h="15px" color={ etapa >= 2 ? "#ffd400" : "#DDDDDD"}  w="15px" borderRadius="50%" alignItems="center" justifyContent="center" fontSize="10">2</Flex>
                         </Flex>
                         <Flex alignItems="center" mt="2">
