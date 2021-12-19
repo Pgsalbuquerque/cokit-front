@@ -7,12 +7,16 @@ import {
   Icon
 } from "@chakra-ui/react";
 import {BiImageAdd} from 'react-icons/bi'
+import api from '../../api'
+import {useHistory} from 'react-router-dom'
 
 export const Etapas = (props) => {
     const [etapa1, setEtapa1] = useState({image: ""})
     const [etapa2, setEtapa2] = useState({titulo: "", descricao: "", localizacao: ""})
     const [etapa3, setEtapa3] = useState({valor: "", dataInicial: "", dataFinal: ""})
-    console.log(etapa1.image)
+    const [enviado, setEnviado] = useState(false)
+    const history = useHistory()
+
     if (props.etapa === 1) {
         return (
         <>
@@ -47,7 +51,24 @@ export const Etapas = (props) => {
         )
     }
 
-    if (props.etapa === 3) {
+    if (props.etapa >= 3) {
+        if (props.etapa === 4 && enviado) {
+            api.post("/produtos", {
+                nome: etapa2.titulo,
+                descricao: etapa2.descricao,
+                local: etapa2.localizacao,
+                preco: etapa3.valor
+
+            }, {
+                headers: {
+                    Authorization: "" + localStorage.getItem("cokitsession")
+                }
+            }).then(r => {
+            localStorage.setItem("cokitsession", r.data.token)
+            history.push('/menu')
+            setEnviado(true)
+            })
+        }
         return (
         <Box mt="20px">
             <Flex flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">

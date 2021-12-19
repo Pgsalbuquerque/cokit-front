@@ -4,48 +4,32 @@ import { Text, Flex, Box, Input, Button, Icon } from '@chakra-ui/react'
 import { EmailIcon, LockIcon} from '@chakra-ui/icons'
 import Fundo from '../../assets/fundo.png'
 import { Link } from 'react-router-dom'
-import { NotMobileError } from '../notmobileerror'
 import {useHistory} from 'react-router-dom'
 import { AiFillEye, AiFillEyeInvisible} from 'react-icons/ai'
 
 import api from '../../api'
 export const Login = () => {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= 470)
     const [email, setEmail] = useState("")
     const [senha, setSenha] = useState("")
     const [verSenha, setVerSenha] = useState(false)
 
     useEffect(() => {
         const token = localStorage.getItem("cokitsession")
-        if (token){
-            history.push("/list")
+        if (token && token !== undefined){
+            history.push("/menu")
         }
     })
 
     const history = useHistory()
-
-    const isMobileFunction = () => {
-        setIsMobile(window.innerWidth <= 470)
-    }
 
     const handleSubmit = () => {
         api.post("/usuarios/login", 
         {email, senha}
     ).then(r => {
         localStorage.setItem("cokitsession", r.data.token)
-        history.push("/list")
+        history.push("/menu")
     }).catch(e => alert("Senha incorreta"))
     }
-
-    useEffect(() => {
-        window.addEventListener('resize', isMobileFunction)
-        return () => window.removeEventListener('resize', isMobileFunction)
-    }, [])
-
-    if (!isMobile) {
-        return <NotMobileError/>
-    }
-
     
 
     return (

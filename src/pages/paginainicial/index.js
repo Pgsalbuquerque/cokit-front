@@ -51,7 +51,7 @@ export const InicialPage = () => {
           >
             <Text
               as={Link}
-              to="/login"
+              to="/"
               textDecoration="none"
               color="#000000"
               ml="30px"
