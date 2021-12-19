@@ -19,7 +19,6 @@ export const Main = () => {
         })
     }, [])
 
-    console.log(produtos)
 
     return (
         <Flex flexDirection="column" h="100%" backgroundColor="#322F38" overflowY="hidden" overflow="auto"> 
@@ -32,7 +31,7 @@ export const Main = () => {
                 </Button>
                 <Flex w="80%" backgroundColor="#FCF7F7" alignItems="center" borderRadius="6" ml="10" >
                     <Icon as={BiSearchAlt2} ml="10" fontSize="16px"/>
-                    <Input h="2rem" onChange={e => setProdutos(total.filter(produtos => produtos.nome.includes(e.target.value)))} w="100%" ml="10" placeholder="O que você está procurando?" outline="none" color="#525050" fontWeight="600" border="none" borderRadius="10" backgroundColor="#FCF7F7"/>
+                    <Input h="2rem" onChange={e => setProdutos(total.filter(produtos => produtos.nome.toLowerCase().includes(e.target.value.toLowerCase())))} w="100%" ml="10" placeholder="O que você está procurando?" outline="none" color="#525050" fontWeight="600" border="none" borderRadius="10" backgroundColor="#FCF7F7"/>
                 </Flex>
             </Flex>
             <Flex flexDirection="column" padding="10">
