@@ -11,7 +11,7 @@ import api from '../../api'
 import {useHistory} from 'react-router-dom'
 
 export const Etapas = (props) => {
-    const [etapa1, setEtapa1] = useState({image: ""})
+    const [etapa1, setEtapa1] = useState({url_image: ""})
     const [etapa2, setEtapa2] = useState({titulo: "", descricao: "", localizacao: ""})
     const [etapa3, setEtapa3] = useState({valor: "", dataInicial: "", dataFinal: ""})
     const [enviado, setEnviado] = useState(false)
@@ -19,15 +19,12 @@ export const Etapas = (props) => {
 
     if (props.etapa === 1) {
         return (
-        <>
-            <Box mt="20px" alignItems="center" justifyContent="center" >
-                <Input opacity="0" color="transparent" type="file" h="5rem" position="absolute" value={etapa1.image} onChange={e => setEtapa1({image: e.target.value})} outline="none" />
-                <Icon as={BiImageAdd} fontSize="80px" color="#000" left="45%" />
-            </Box>
-            <Box>
-                <Text>Clique para adicionar uma imagem</Text>
-            </Box>
-        </>
+        <Box mt="20px">
+            <Flex flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">
+                <Text as="small" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600" backgroundColor="#FCF7F7">Url da imagem</Text>
+                <Input value={etapa1.url_image} onChange={e => setEtapa1({url_image: e.target.value})} border="none" borderBottom={`2px solid ${etapa1.nome === "" ? "#DDDDDD" :  "#ffd400"}`} outline="none" type="url" h="2rem" textIndent="10px" w="16rem" color="#525050" fontWeight="600" backgroundColor="#FCF7F7"/>
+            </Flex>
+        </Box>
         )
     }
 
@@ -52,22 +49,26 @@ export const Etapas = (props) => {
     }
 
     if (props.etapa >= 3) {
-        if (props.etapa === 4 && enviado) {
+        
+        if (props.etapa === 4 && !enviado) {
+            setEnviado(true)
             api.post("/produtos", {
                 nome: etapa2.titulo,
                 descricao: etapa2.descricao,
                 local: etapa2.localizacao,
-                preco: etapa3.valor
+                preco: etapa3.valor,
+                imagem: etapa1.url_image,
+                dataInicial: etapa3.dataInicial,
+                dataFinal: etapa3.dataFinal
 
             }, {
                 headers: {
-                    Authorization: "" + localStorage.getItem("cokitsession")
+                    Authorization: localStorage.getItem("cokitsession")
                 }
             }).then(r => {
-            localStorage.setItem("cokitsession", r.data.token)
-            history.push('/menu')
-            setEnviado(true)
+                return history.push('/menu')
             })
+            
         }
         return (
         <Box mt="20px">
@@ -81,7 +82,7 @@ export const Etapas = (props) => {
             </Flex>
             <Flex mt="10px" flexDirection="column" w="16rem" backgroundColor="#FCF7F7" alignItems="flex-start" borderRadius="10">
                 <Text as="small" textDecoration="none" color="#505565" fontSize="14px" fontWeight="600" backgroundColor="#FCF7F7">Data final</Text>
-                <Input value={etapa3.dataInicial}  onChange={e => setEtapa3({valor: etapa3.valor, dataInicial: etapa3.dataInicial, dataFinal: e.target.value})} border="none" borderBottom={`2px solid ${etapa3.confirmarSenha === "" ? "#DDDDDD" :  "#ffd400"}`} outline="none" type="date" h="2rem" textIndent="10px" w="16rem" color="#525050" fontWeight="600" backgroundColor="#FCF7F7"/>
+                <Input value={etapa3.dataFinal}  onChange={e => setEtapa3({valor: etapa3.valor, dataInicial: etapa3.dataInicial, dataFinal: e.target.value})} border="none" borderBottom={`2px solid ${etapa3.confirmarSenha === "" ? "#DDDDDD" :  "#ffd400"}`} outline="none" type="date" h="2rem" textIndent="10px" w="16rem" color="#525050" fontWeight="600" backgroundColor="#FCF7F7"/>
             </Flex>
         </Box>
 

@@ -17,11 +17,11 @@ export const AlugarProduto = () => {
     const [produto, setProduto] = useState({}) 
     const params = useParams()
     const history = useHistory()
+    
     useEffect(() => {
         api.get("/produtos/" + params.product_id)
         .then(r => setProduto(r.data))
     }, [])
-    console.log(produto)
 
     const handleSubmit = () => {
 
@@ -43,7 +43,7 @@ export const AlugarProduto = () => {
                 </Button>
                 <Text color="#FFD400" fontWeight="600" fontSize="22px" ml="80px"> Alugar produto</Text>
             </Flex>
-            <Image h="14rem" src={ImageTest} w ="80%"></Image>
+            <Image h="14rem" src={produto.imagem} w ="80%"></Image>
             <Text fontSize="20px" fontWeight="600" as="small" textAlign="center" color="#fff" mt="10px">{produto.nome}</Text>
             <Flex flexDirection="column" Maxh="220px" w="100%" mt="8px" ml="50">
                 <Flex ml="12px " flexDirection="column">

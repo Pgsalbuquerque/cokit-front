@@ -8,7 +8,6 @@ import Logo from "../../assets/logo.svg";
 
 export const InicialPage = () => {
   const frase = "COZINHAS\n PERTO DE VOCÊ!";
-  console.log(frase);
   return (
     <Flex h="100%" w="100%" flexDirection="column" backgroundColor="#ffd400">
       <Flex alignItems="center" justifyContent="center" flexDirection="column">

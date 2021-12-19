@@ -36,7 +36,7 @@ export const Main = () => {
                 </Flex>
             </Flex>
             <Flex flexDirection="column" padding="10">
-                {produtos.map(produto => <Card key={produto.id} idp={produto.id} nome={produto.nome} preco={produto.preco} local={produto.local} nomeLoc={produto.locatario.nome} descricao={produto.descricao}   />)}
+                {produtos.map(produto => <Card key={produto.id} idp={produto.id} imagem={produto.imagem} nome={produto.nome} preco={produto.preco} local={produto.local} nomeLoc={produto.locatario.nome} descricao={produto.descricao}   />)}
             </Flex>
         </Flex>
     )

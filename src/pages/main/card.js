@@ -9,7 +9,7 @@ export const Card = (props) => {
     return (
         <Flex border="2px solid #ffd400" h="11rem" alignItems="center" justifyContent="space-evenly" borderRadius="10" mt="10" backgroundColor="#FCF7F7" ml="10px" mr="10px">
             <Flex w="50%" alignItems="center" justifyContent="center">
-                <Image h="150px" src={ImageTest} borderRadius="6"></Image>
+                <Image maxH="150px" maxW="150px" src={props.imagem} borderRadius="6"></Image>
             </Flex>
             <Flex w="50%" h="100%" flexDirection="column" alignItems="flex-start" justifyContent="space-evenly">
                 <Flex alignItems="center" justifyContent="center" w="100%">

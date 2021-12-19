@@ -27,7 +27,7 @@ export const ProdutosAlugados = () => {
                 </Flex>
             </Flex>
             <Flex flexDirection="column" padding="10">
-                {data.map(produto => produto.datasAlugadas.map((data, index) => <Card key={`${produto.id}_${index}`} locatario={produto.locatario} avaliacao={produto.avaliacao} datas={data} local={produto.local} preco={produto.preco}/>))}
+                {data.map(produto => produto.datasAlugadas.map((data, index) => <Card key={`${produto.id}_${index}`} imagem={produto.imagem} locatario={produto.locatario} avaliacao={produto.avaliacao} datas={data} local={produto.local} preco={produto.preco}/>))}
             </Flex>
         </Flex>
     )
