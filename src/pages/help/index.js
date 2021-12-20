@@ -51,7 +51,7 @@ export const Ajuda = () => {
         <Text as="h1" maxH="100" fontSize="40px" color="#fff">
           Ajuda
         </Text>
-        {/* <Box h="2" w="13rem" backgroundColor="#ffd400"></Box> */}
+
 
         <Flex flexDirection="column" marginTop="20px" alignItems="center">
           <Flex

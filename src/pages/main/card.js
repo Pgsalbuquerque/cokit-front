@@ -7,7 +7,7 @@ import ImageTest from '../../assets/imageteste1.png'
 
 export const Card = (props) => {
     return (
-        <Flex border="2px solid #ffd400" h="11rem" alignItems="center" justifyContent="space-evenly" borderRadius="10" mt="10" backgroundColor="#FCF7F7" ml="10px" mr="10px">
+        <Flex border="2px solid #ffd400" py={5} minH="11rem" alignItems="center" justifyContent="space-evenly" borderRadius="10" mt="10" backgroundColor="#FCF7F7" ml="10px" mr="10px">
             <Flex w="50%" alignItems="center" justifyContent="center">
                 <Image maxH="150px" maxW="150px" src={props.imagem} borderRadius="6"></Image>
             </Flex>
@@ -19,11 +19,14 @@ export const Card = (props) => {
                     <Icon as={BiUserCircle} color="#ffd400" fontSize="20px" />
                     <Text ml="4" fontSize="14" color="#525050" fontWeight="600" as="small">{props.nomeLoc}</Text>
                     <Icon as={BiStar} color="#ffd400" fontSize="20px" ml="4" />
-                    <Text ml="4" fontSize="14" color="#525050" fontWeight="600" as="small">4.9</Text>
+                    <Text ml="4" fontSize="14" color="#525050" fontWeight="600" as="small">{props.avaliacao == null ? "5.0" : props.avaliacao + ".0"}</Text>
                 </Flex>
                 <Flex alignItems="center">
                     <Icon as={BiHourglass} color="#ffd400" fontSize="20px" />
-                    <Text ml="4" fontSize="14" color="#525050" fontWeight="600" as="small">16/jan/21 - 30/abr/21</Text>
+                    <Flex flexDirection="column">
+                        <Text ml="4" fontSize="14" color="#525050" fontWeight="600" as="small">{props.dataInicial}</Text>
+                        <Text ml="4" fontSize="14" color="#525050" fontWeight="600" as="small">{props.dataFinal}</Text>
+                    </Flex>
                 </Flex>
                 <Flex alignItems="center">
                     <Icon as={BiLocationPlus} color="#ffd400" fontSize="20px" />

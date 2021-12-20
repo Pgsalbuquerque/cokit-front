@@ -59,7 +59,7 @@ export const AlugarProduto = () => {
                         <Icon as={BiUserCircle} color="#ffd400" fontSize="24px"/>
                         <Text as="small" color="#FCF7F7" fontWeight="600" ml="10px">{produto.locatario ? produto.locatario.nome : ""}</Text>
                         <Icon as={BiStar} color="#ffd400" fontSize="24px" ml="10px"/>
-                        <Text as="small" color="#FCF7F7" fontWeight="600" ml="10px">4.9</Text>
+                        <Text as="small" color="#FCF7F7" fontWeight="600" ml="10px">{produto.avaliacao == null ? "5.0" : produto.avaliacao + ".0"}</Text>
                     </Flex>
                     <Flex alignItems="center" mt="10px">
                         <Icon as={BiLocationPlus} color="#ffd400" fontSize="24px"/>
@@ -69,7 +69,7 @@ export const AlugarProduto = () => {
                     </Flex>
                     <Flex alignItems="center" mt="10px">
                         <Icon as={BiHourglass} color="#FFC633" fontSize="24px"/>
-                        <Text as="small" color="#FCF7F7" fontWeight="600" ml="10px">16/jan/21 - 30/abr/21</Text>
+                        <Text as="small" color="#FCF7F7" fontWeight="600" ml="10px">{produto.dataInicial + " - " + produto.dataFinal}</Text>
                     </Flex>
    
             </Flex>

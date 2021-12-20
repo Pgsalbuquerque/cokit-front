@@ -18,7 +18,7 @@ import {NotMobileError} from "./pages/notmobileerror";
 import {Chat} from "./pages/chat";
 import {Menu} from "./pages/menu";
 import {InicialPage} from "./pages/paginainicial";
-
+import {Feedback} from './pages/feedbacks'
 
 export default function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 470)
@@ -46,6 +46,7 @@ export default function App() {
             <Route exact path="/product/me/rented2" render={() => <ProdutosAlugados2/>}/>
             <Route exact path="/product/me/registered" render={() => <ProdutosAnunciados/>}/>
             <Route exact path="/product/me/register" render={() => <CadastrarProduto/>}/>
+            <Route exact path="/product/feedback/:product_id" render={() => <Feedback/>}/>
             <Route exact path="/help" render={() => <Ajuda/>}/>
             <Route exact path="/login" render={() => <Login/>}/>
             <Route exact path="/chat/:user_id" render={() => <Chat/>}/>

@@ -6,8 +6,11 @@ import { BiChevronLeft, BiSearchAlt2, BiX, BiArrowBack } from 'react-icons/bi'
 import { Card } from './card'
 import { Link } from 'react-router-dom'
 import api from '../../api'
+import { useHistory } from 'react-router-dom'
+
 export const ProdutosAnunciados = () => {
     const [data, setData] = useState([])
+    
 
     useEffect(() => {
         api.get("/produtos/anuncios", {
@@ -16,6 +19,7 @@ export const ProdutosAnunciados = () => {
             }
         }).then(r => setData(r.data))
     }, [])
+
     return (
         <Flex flexDirection="column" h="100%" backgroundColor="#322F38" overflowY="hidden" overflow="auto"> 
             <Flex alignItems="center" mt="20" maxH="30px" ml="20px">
@@ -27,7 +31,7 @@ export const ProdutosAnunciados = () => {
                 </Flex>
             </Flex>
             <Flex flexDirection="column" padding="10">
-                {data.map(produto => <Card key={produto.id} imagem={produto.imagem} locatario={produto.locatario} avaliacao={produto.avaliacao} local={produto.local} preco={produto.preco} nome={produto.nome}/>)}
+                {data.map(produto => <Card key={produto.id} imagem={produto.imagem} idp={produto.id} locatario={produto.locatario} avaliacao={produto.avaliacao} local={produto.local} preco={produto.preco} nome={produto.nome}/>)}
             </Flex>
         </Flex>
     )
